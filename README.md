@@ -51,12 +51,12 @@ The file `main.cpp` is used for:
 
 ### tetrominoes.h
 
-5. Contains the `tetrominoes` class and a `node` structure.
-6. **Structure `node`**:
+1. Contains the `tetrominoes` class and a `node` structure.
+2. **Structure `node`**:
    - `COORD p`: Position coordinates
    - `node* next`: Self-referencing pointer for linked list
    - Constructor to initialize the node
-7. **Class `tetrominoes`**:
+3. **Class `tetrominoes`**:
    - **Private**:
      - `vector<node*> shape`: Stores tetromino shapes
      - `node* current_shape`: Active tetromino
@@ -75,23 +75,23 @@ The file `main.cpp` is used for:
 ### tetrominoes.cpp
 
 Contains the implementation of functions declared in `tetrominoes.h`:
-8. Constructor and destructor for `tetrominoes`
-9. Functions to create each tetromino shape: `O()`, `I()`, `S()`, `Z()`, `L()`, `J()`, `T()`
-10. `Shape()`: Randomly generates a new tetromino
-11. `change_dir`: Updates movement direction
-12. `move`: Handles tetromino movement (left, right, down)
-13. `collision`: Checks for collisions with the grid or boundaries
-14. `rotation`: Rotates the tetromino around a pivot point
-15. `canSpawn`: Verifies if a new tetromino can appear without overlap
-16. `freeShape`: Deallocates memory for tetromino nodes
+1. Constructor and destructor for `tetrominoes`
+2. Functions to create each tetromino shape: `O()`, `I()`, `S()`, `Z()`, `L()`, `J()`, `T()`
+3. `Shape()`: Randomly generates a new tetromino
+4. `change_dir`: Updates movement direction
+5. `move`: Handles tetromino movement (left, right, down)
+6. `collision`: Checks for collisions with the grid or boundaries
+7. `rotation`: Rotates the tetromino around a pivot point
+8. `canSpawn`: Verifies if a new tetromino can appear without overlap
+9. `freeShape`: Deallocates memory for tetromino nodes
 
 ---
 
 ## How Code Works
 
-17. The `Grid` class in `main.cpp` creates a 20x10 grid (plus a 3-row buffer at the top) to manage the play area.
-18. The `tetrominoes` class generates and controls falling tetrominoes using a linked list of nodes.
-19. **Game Loop** (in `main.cpp`):
+1. The `Grid` class in `main.cpp` creates a 20x10 grid (plus a 3-row buffer at the top) to manage the play area.
+2. The `tetrominoes` class generates and controls falling tetrominoes using a linked list of nodes.
+3. **Game Loop** (in `main.cpp`):
    - Renders the grid with the current tetromino
    - Handles user input:
      - `a`: Move left
@@ -99,31 +99,31 @@ Contains the implementation of functions declared in `tetrominoes.h`:
      - `w`: Rotate clockwise
      - `q`: Quit game
    - Moves the tetromino down automatically and checks for collisions
-20. When a tetromino collides with the grid or floor:
+4. When a tetromino collides with the grid or floor:
    - It locks into place
    - Full rows are cleared
    - A new tetromino spawns
-21. **Game Over**: Occurs if a new tetromino cannot spawn without overlapping existing blocks.
-22. The `hideCursor` function (from `windows.h`) hides the console cursor for a cleaner display.
+5. **Game Over**: Occurs if a new tetromino cannot spawn without overlapping existing blocks.
+6. The `hideCursor` function (from `windows.h`) hides the console cursor for a cleaner display.
 
 ---
 
 ## Features of The Game
 
-23. **Start**: Begins with a randomly selected tetromino at the top center of the grid.
-24. **Controls**:
+1. **Start**: Begins with a randomly selected tetromino at the top center of the grid.
+2. **Controls**:
    - `a`: Move left
    - `d`: Move right
    - `w`: Rotate clockwise
    - `q`: Quit game
-25. **Display**:
+3. **Display**:
    - `❌`: Walls
    - `⬜`: Tetromino blocks and locked pieces
    - Empty spaces: Unoccupied areas
-26. **Scoring**:
+4. **Scoring**:
    - 10 points per cleared row
    - Score displayed below the grid
-27. **Game Over**:
+5. **Game Over**:
    - Triggered when the grid fills to the top
    - Displays "Game Over! Final Score: [score]" and exits after a 2-second delay
 
@@ -131,18 +131,19 @@ Contains the implementation of functions declared in `tetrominoes.h`:
 
 ## What We Learnt
 
-28. **Linked Lists**: For tetromino representation
-29. **Windows.h**: For console manipulation
-30. **Conio.h**: For keyboard input
-31. **Classes**: Object-oriented programming
-32. **Header Files**: Multi-file compilation
-33. **Random Number Generation**: For tetromino selection
-34. **Grid-Based Game Logic**
+1. **Linked Lists**: For tetromino representation
+2. **Windows.h**: For console manipulation
+3. **Conio.h**: For keyboard input
+4. **Classes**: Object-oriented programming
+5. **Header Files**: Multi-file compilation
+6. **Random Number Generation**: For tetromino selection
+7. **Grid-Based Game Logic**
 
 ---
 
 ## Acknowledgment
 
-- **ChatGPT**
+- **xAI's GROK**
+  
 
 ---
