@@ -25,7 +25,7 @@ The Tetris Game is a classic puzzle game where the player controls falling tetro
 ---
 
 ## Files Used
-1. `main.cpp`
+1. `game.cpp`
 2. `tetrominoes.h`
 3. `tetrominoes.cpp`
 
@@ -42,9 +42,9 @@ The Tetris Game is a classic puzzle game where the player controls falling tetro
 
 ## Brief File Description
 
-### main.cpp
+### game.cpp
 
-The file `main.cpp` is used for:
+The file `game.cpp` is used for:
 - Starting the game
 - Managing the game loop
 - Rendering the grid and handling user input
@@ -89,9 +89,9 @@ Contains the implementation of functions declared in `tetrominoes.h`:
 
 ## How Code Works
 
-1. The `Grid` class in `main.cpp` creates a 20x10 grid (plus a 3-row buffer at the top) to manage the play area.
+1. The `Grid` class in `game.cpp` creates a 20x10 grid (plus a 3-row buffer at the top) to manage the play area.
 2. The `tetrominoes` class generates and controls falling tetrominoes using a linked list of nodes.
-3. **Game Loop** (in `main.cpp`):
+3. **Game Loop** (in `game.cpp`):
    - Renders the grid with the current tetromino
    - Handles user input:
      - `a`: Move left
