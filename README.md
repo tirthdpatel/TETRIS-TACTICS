@@ -25,7 +25,7 @@ The Tetris Game is a classic puzzle game where the player controls falling tetro
 ---
 
 ## Files Used
-1. `game.cpp`
+1. `main.cpp`
 2. `tetrominoes.h`
 3. `tetrominoes.cpp`
 
